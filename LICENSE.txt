@@ -1,4 +1,4 @@
-Copyright (c) 2013 linhanjen
+Copyright (c) 2013  Wei-Ming Wu, Han-Jen Lin
 
 MIT License
 
