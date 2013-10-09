@@ -89,13 +89,9 @@ module Hadoop::Samtools
         exts = %w(bai)
         @uploader.upload_files local, hdfs, exts.map { |ext| "#{files[0]}.#{ext}" }
       when 'merge'
-        `#{@samtools} #{cmd}`
-    
-        @uploader.upload_files local, hdfs, exts.map { |ext| "#{files[0]}.#{ext}" }
+        raise NotSupportedError, 'MergeNotSupport.'
       when 'rmdup'
-        `#{@samtools} #{cmd}`
-        
-        @uploader.upload_files local, hdfs, exts.map { |ext| "#{files[0]}.#{ext}" }    
+        raise NotSupportedError, 'RmdupNotSupport.'    
       when 'view'
         files = files + SAMTOOLS_PREREQUISITE['view'].map { |ext| "#{files[0]}.#{ext}" }
         @uploader.upload_files local, hdfs, files
