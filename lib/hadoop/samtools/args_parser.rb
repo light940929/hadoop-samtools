@@ -7,7 +7,7 @@ module Hadoop::Samtools
   module ArgsParser
     # CMD_FORMAT defines the number of required files for each samtools command.
     # how to listen merge file?
-    CMD_FORMAT = { faidx: [1],   view: [2,3],   merge: [2],
+    CMD_FORMAT = { faidx: [1],   view: [1,2],   merge: [2],
                    sort: [2], rmdup: [2],  index: [1] ,
                    mpileup: [2] }.with_indifferent_access
     include Errors
