@@ -1,10 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'hadoop/samtools'
-require 'hadoop/bcftools'
 
 hadoop_samtools = Hadoop::Samtools.new
-hadoop_bcftools = Hadoop::Bcftools.new
 
 hadoop_samtools.run ARGV.join(' ')
-hadoop_bcftools.run ARGV.join(' ')
