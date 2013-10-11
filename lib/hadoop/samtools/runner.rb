@@ -76,7 +76,7 @@ module Hadoop::Samtools
     private
     
     def streaming cmd, local, hdfs, files
-      bwa_cmd = cmd.split(/\s+/)[0]
+      samtools_cmd = cmd.split(/\s+/)[0]
       puts "Execuating Samtools #{samtools_cmd}, required files: #{files}"
       puts "Preparing for Hadoop Streaming..."
       case samtools_cmd
